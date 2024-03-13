@@ -1,7 +1,7 @@
 .model small
 .stack 100h
 .data
-    array dw 16 DUP(0) ; Define an array of 15 words, initially filled with 0s
+    array dw 16 DUP(0) ; Define an array of 16 words, initially filled with 0s
 
 .code
 main PROC
@@ -20,7 +20,7 @@ array_loop:
     add ax, 3             ; next number in the sequence
     inc cx
     cmp cx, 16
-    jne array_loop    ; Repeat if cx != 15
+    jne array_loop    ; Repeat if cx != 16
 
     mov ax, 4C00h       ; Terminate program
     int 21h
